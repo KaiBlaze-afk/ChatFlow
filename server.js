@@ -24,9 +24,11 @@ io.on("connection", (socket) => {
   socket.on("chat message", (message) => {
     fs.appendFileSync(
       "./message.txt",
-      '<div class="msgblock" style="color: hsl(' +
+      '<div class="msgblock ' +
+        message.name +
+        '" style="background-color: hsl(' +
         message.color +
-        ', 100%, 30%);">' +
+        ', 100%, 50%);">' +
         message.name +
         ": " +
         message.input +

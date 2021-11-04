@@ -11,7 +11,7 @@ body {
 #header {
   font-size: 40px;
   padding: 4px;
-  color: hsl(225, 100%, 30%);
+  color: hsl(221, 100%, 9%);
 }
 #msgbox {
   background-color: rgba(245, 255, 255, 0.892);
@@ -56,8 +56,11 @@ body {
   border-radius: 30px 30px 2px 2px;
 }
 .msgblock {
-  border: 1px solid grey;
-  height: 30px;
-  padding-top: 10px;
-  padding-left: 20px;
+  padding: 5px 20px 5px 20px;
+  margin: 10px 20px 0px 20px;
+  border-radius: 15px 80px 80px 80px;
+  float: left;
+  clear: both;
+  color: rgb(255, 255, 255);
+  max-width: 70%;
 }
