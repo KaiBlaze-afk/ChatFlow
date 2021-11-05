@@ -57,10 +57,13 @@ body {
 }
 .msgblock {
   padding: 5px 20px 5px 20px;
-  margin: 10px 20px 0px 20px;
+  margin: 0px 20px 10px 20px;
   border-radius: 15px 80px 80px 80px;
   float: left;
   clear: both;
   color: rgb(255, 255, 255);
   max-width: 70%;
+}
+.msgblock:nth-child(1){
+  margin-top: 20px;
 }

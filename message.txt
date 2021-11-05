@@ -1,0 +1,35 @@
+<div class="msgblock Adarsh" style="background-color: hsl(80, 100%, 50%);">Adarsh: Hey</div>
+<div class="msgblock Kai" style="background-color: hsl(220, 100%, 50%);">Kai: Hiii </div>
+<div class="msgblock Adarsh" style="background-color: hsl(80, 100%, 50%);">Adarsh: how are you?</div>
+<div class="msgblock Kai" style="background-color: hsl(220, 100%, 50%);">Kai: I'm good hbu?</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: Hello</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: hey</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: how is you adarsh</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: I'm great</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: Hbu?</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: I'm great as well</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: glad you asked</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: Yeah yeah whatever</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh:  I'm here to check it the system is working</div>
+<div class="msgblock Adarsh" style="background-color: hsl(80, 100%, 50%);">Adarsh: Hey</div>
+<div class="msgblock Kai" style="background-color: hsl(220, 100%, 50%);">Kai: Hiii </div>
+<div class="msgblock Adarsh" style="background-color: hsl(80, 100%, 50%);">Adarsh: how are you?</div>
+<div class="msgblock Kai" style="background-color: hsl(220, 100%, 50%);">Kai: I'm good hbu?</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: Hello</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: hey</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: how is you adarsh</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: I'm great</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: Hbu?</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: I'm great as well</div>
+<div class="msgblock Kai" style="background-color: hsl(260, 100%, 50%);">Kai: glad you asked</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh: Yeah yeah whatever</div>
+<div class="msgblock Adarsh" style="background-color: hsl(20, 100%, 50%);">Adarsh:  I'm here to check it the system is working</div>
+<div class="msgblock Adarsh" style="background-color: hsl(220, 100%, 50%);">Adarsh: Hey</div>
+<div class="msgblock Kai" style="background-color: hsl(340, 100%, 50%);">Kai: Hey there,</div>
+<div class="msgblock Adarsh" style="background-color: hsl(0, 100%, 50%);">Adarsh: Hiii</div>
+<div class="msgblock Adarsh" style="background-color: hsl(0, 100%, 50%);">Adarsh: Hii</div>
+<div class="msgblock Adarsh" style="background-color: hsl(300, 100%, 50%);">Adarsh: Heyyyyy</div>
+<div class="msgblock Adarsh" style="background-color: hsl(300, 100%, 50%);">Adarsh: So </div>
+<div class="msgblock Adarsh" style="background-color: hsl(300, 100%, 50%);">Adarsh: It's working great</div>
+<div class="msgblock Adarsh" style="background-color: hsl(240, 100%, 50%);">Adarsh: Hi</div>
+<div class="msgblock Adarsh" style="background-color: hsl(240, 100%, 50%);">Adarsh: Yo</div>

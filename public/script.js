@@ -1,5 +1,4 @@
 var socket = io();
-
 random = () => {
   let y = Math.floor(Math.random() * (18 - 0)) + 0;
   let x = y * 20;
@@ -22,6 +21,8 @@ socket.on("namee", (namee) => {
 let randomcolor = random();
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  input.focus();
+  scrollupdate()
   if (input.value) {
     socket.emit("chat message", {
       input: input.value,
@@ -38,6 +39,7 @@ form.addEventListener("submit", function (e) {
 socket.on("data", (data) => {
   document.getElementById("welcome").innerHTML = "";
   document.getElementById("msgbox").innerHTML = data;
+  scrollupdate()
   document
     .getElementById("msgbox")
     .setAttribute("style", "border-radius: 30px 30px 2px 2px;");
@@ -49,3 +51,9 @@ socket.on("data", (data) => {
     );
   }
 });
+let scrollupdate=()=>{
+var myDiv = document.getElementById("msgbox");
+myDiv.scrollTop = myDiv.scrollHeight;
+}
+
+scrollupdate()

@@ -39,7 +39,7 @@ io.on("connection", (socket) => {
   });
 });
 
-mails = () => {
+let mails = () => {
   fs.readFile("./message.txt", "utf-8", (err, data) => {
     if (err) console.log(err);
     io.emit("data", data);
