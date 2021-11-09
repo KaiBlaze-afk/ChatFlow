@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mailbox</title>
+    <title>Chat Flow</title>
     <link rel="stylesheet" href="style.css" />
     <script defer src="socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
     <div id="container">
-      <div id="header">MailBox</div>
+      <div id="header">Chat Flow 
+        <form action="/" method="POST" enctype="multipart/form-data" id="imgform">
+        <input type="file" name="file" id="file">
+        </form></div>
       <div id="welcome"></div>
       <div id="msgbox"></div>
       <form id="form" action="">
-        <input id="input" type="text" autofocus autocomplete="off" />
+        <input id="input" type="text" autofocus autocomplete="off" placeholder="Enter Your Message.."/>
+        <label for="file" id="label"><img id="clip" src="clip.png" alt="Image"></label>
         <input type="submit" id="send" value="Send" />
       </form>
     </div>

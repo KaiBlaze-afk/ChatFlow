@@ -11,7 +11,8 @@ body {
 #header {
   font-size: 40px;
   padding: 4px;
-  color: hsl(221, 100%, 9%);
+  color: hsl(0, 0%, 100%);
+  font-family:'Times New Roman', Times, serif;
 }
 #msgbox {
   background-color: rgba(245, 255, 255, 0.892);
@@ -31,8 +32,8 @@ body {
   height: 38px;
   border-radius: 15px;
   padding-left: 15px;
-  color: #2ecc71;
-  border-color: #2ecc71;
+  color: #1cb85d;
+  border-color: #002582;
   width: 250px;
   font-size: 16px;
 }
@@ -46,6 +47,7 @@ body {
   color: white;
   border: none;
   border-radius: 10px;
+  display: none;
 }
 #welcome {
   background-color: rgb(182, 255, 245);
@@ -66,4 +68,30 @@ body {
 }
 .msgblock:nth-child(1){
   margin-top: 20px;
+}
+.send-images{
+  max-width: 68%;
+  object-fit: contain;
+}
+.send-video{
+  padding: 5px 20px 5px 20px;
+  margin: 0px 20px 10px 20px;
+  border-radius: 15px;
+  float: left;
+  clear: both;
+  max-width: 68%;
+  object-fit: contain;
+}
+#file{
+  display: none;
+}
+#clip{
+  width: 30px;
+  font-size: 20px;
+  background-color: rgb(171, 235, 255);
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: -13px;
+  padding: 5px;
 }

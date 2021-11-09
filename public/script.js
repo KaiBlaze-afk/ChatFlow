@@ -1,4 +1,13 @@
 var socket = io();
+var name = prompt("Enter Your Name");
+var form = document.getElementById("form");
+var input = document.getElementById("input");
+var clip = document.getElementById("clip");
+var send = document.getElementById("send");
+var file = document.getElementById("file")
+var imgform = document.getElementById("imgform")
+document.getElementById("welcome").innerHTML = "Welcome";
+
 random = () => {
   let y = Math.floor(Math.random() * (18 - 0)) + 0;
   let x = y * 20;
@@ -7,22 +16,20 @@ random = () => {
   }
   return x;
 };
-document.getElementById("welcome").innerHTML = "Welcome";
-let name = prompt("Enter Your Name");
-socket.emit("name", name);
-var form = document.getElementById("form");
-var input = document.getElementById("input");
+let randomcolor = random();
+
 socket.on("namee", (namee) => {
   document.getElementById("welcome").innerHTML = namee + " Joined the chat";
   document
     .getElementById("msgbox")
     .setAttribute("style", "border-radius: 2px 2px 2px 2px;");
 });
-let randomcolor = random();
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   input.focus();
-  scrollupdate()
+  scrollupdate()  
+  clip.style.display="inline";
+  send.style.display="none";
   if (input.value) {
     socket.emit("chat message", {
       input: input.value,
@@ -55,5 +62,24 @@ let scrollupdate=()=>{
 var myDiv = document.getElementById("msgbox");
 myDiv.scrollTop = myDiv.scrollHeight;
 }
-
+input.addEventListener('keydown',function (){
+  if(input.value==""){
+    clip.style.display="inline";
+    send.style.display="none";
+  }else{
+    clip.style.display="none";
+    send.style.display="inline";
+  }
+})
+file.onchange = () => {
+  socket.emit('imagesender',{
+    name: name,
+    color: randomcolor,
+  })
+  const selectedFile = file.files[0];
+  if(selectedFile){
+    imgform.submit();
+    file.value= null;
+  }
+}
 scrollupdate()
