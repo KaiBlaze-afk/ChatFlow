@@ -11,15 +11,29 @@
   </head>
   <body>
     <div id="container">
-      <div id="header">Chat Flow 
-        <form action="/" method="POST" enctype="multipart/form-data" id="imgform">
-        <input type="file" name="file" id="file">
-        </form></div>
+      <div id="header"><button onclick="showopt()">Chat Flow</button></div>
+      <div>
+        <button id="darkmode" class="options" onclick="darkmode()">Dark Mode <img src="Darkmode.png"></button>
+      </div>
+      <div class="options"></div>
+      <div class="options"></div>
+      <div class="options"></div>
+      <form action="/" method="POST" enctype="multipart/form-data" id="imgform">
+        <input type="file" name="file" id="file" />
+      </form>
       <div id="welcome"></div>
-      <div id="msgbox"></div>
+      <div id="msgbox" class="msgbox"></div>
       <form id="form" action="">
-        <input id="input" type="text" autofocus autocomplete="off" placeholder="Enter Your Message.."/>
-        <label for="file" id="label"><img id="clip" src="clip.png" alt="Image"></label>
+        <input
+          id="input"
+          type="text"
+          autofocus
+          autocomplete="off"
+          placeholder="Enter Your Message.."
+        />
+        <label for="file" id="label"
+          ><img id="clip" src="clip.png" alt="Image"
+        /></label>
         <input type="submit" id="send" value="Send" />
       </form>
     </div>

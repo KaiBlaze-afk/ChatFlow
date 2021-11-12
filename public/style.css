@@ -8,14 +8,37 @@ body {
   margin: 0px;
   padding: 0px;
 }
-#header {
+#header button {
   font-size: 40px;
   padding: 4px;
   color: hsl(0, 0%, 100%);
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
+  background-color: transparent;
+  border: none;
 }
-#msgbox {
+.options {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 12px;
+  border-top: 1px solid rgb(255, 255, 255);
+  border-radius: 40px 40px 0px 0px;
+  width: 100%;
+  display: none;
+}
+#darkmode img {
+  width: 20px;
+}
+.msgbox {
   background-color: rgba(245, 255, 255, 0.892);
+  height: 77vh;
+  max-width: 100%;
+  overflow: auto;
+  text-align: start;
+}
+.msgbox-dark {
+  background-color: rgba(0, 17, 17, 0.933);
   height: 77vh;
   max-width: 100%;
   overflow: auto;
@@ -66,14 +89,14 @@ body {
   color: rgb(255, 255, 255);
   max-width: 70%;
 }
-.msgblock:nth-child(1){
+.msgblock:nth-child(1) {
   margin-top: 20px;
 }
-.send-images{
+.send-images {
   max-width: 68%;
   object-fit: contain;
 }
-.send-video{
+.send-video {
   padding: 5px 20px 5px 20px;
   margin: 0px 20px 10px 20px;
   border-radius: 15px;
@@ -82,10 +105,19 @@ body {
   max-width: 68%;
   object-fit: contain;
 }
-#file{
+.send-audio{
+  height: 50px;
+  margin: 0px 20px 10px 20px;
+  font-size: 30px;
+  float: left;
+  clear: both;
+  width: 70%;
+  object-fit: contain;
+}
+#file {
   display: none;
 }
-#clip{
+#clip {
   width: 30px;
   font-size: 20px;
   background-color: rgb(171, 235, 255);

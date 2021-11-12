@@ -8,11 +8,8 @@ const PORT = process.env.PORT || 3000;
 const socketio = require("socket.io");
 const server = http.createServer(app);
 const io = socketio(server);
-
 app.use(upload());
-
 app.use(express.static(path.join(__dirname, "public")));
-
 server.listen(PORT, () => console.log(`Server is online on port ${PORT}`));
 
 io.on("connection", (socket) => {
@@ -48,23 +45,77 @@ io.on("connection", (socket) => {
       if (req.files) {
         var file = req.files.file;
         var filename = file.name;
-        console.log(filename);
+        let ext = filename.split(".").pop();
         file.mv("./public/uploads/" + filename, function (err) {
           if (err) {
             res.send(err);
           } else {
             res.sendFile(__dirname + "/public/index.html");
-            fs.appendFileSync(
-              "./message.txt",
-              '<img class="msgblock send-images ' +
-                naam.name +
-                '" style="background-color: hsl(' +
-                naam.color +
-                ', 100%, 50%);" src="./uploads/' +
-                filename +
-                '"> ' +
-                "\n"
-            );
+            if (ext == "jpg" || ext == "png" || ext == "jpeg" || ext == "gif") {
+              fs.appendFileSync(
+                "./message.txt",
+                '<img class="msgblock send-images ' +
+                  naam.name +
+                  '" style="background-color: hsl(' +
+                  naam.color +
+                  ', 100%, 50%);" src="./uploads/' +
+                  filename +
+                  '"> ' +
+                  "\n"
+              );
+            } else if (ext == "mp4" || ext == "webm" || ext == "mkv") {
+              fs.appendFileSync(
+                "./message.txt",
+                '<video class="msgblock send-video ' +
+                  naam.name +
+                  '" style="background-color: hsl(' +
+                  naam.color +
+                  ', 100%, 50%);" controls><source src="./uploads/' +
+                  filename +
+                  '" type="video/' +
+                  ext +
+                  '"></video>' +
+                  "\n"
+              );
+            } else if (ext == "mp3" || ext == "wav") {
+              fs.appendFileSync(
+                "./message.txt",
+                '<video class="msgblock send-audio ' +
+                  naam.name +
+                  '" style="background-color: hsl(' +
+                  naam.color +
+                  ', 100%, 50%);" controls><source src="./uploads/' +
+                  filename +
+                  '" type="audio/' +
+                  ext +
+                  '"></video>' +
+                  "\n"
+              );
+            } else if(ext == "pdf" || ext == "txt" || ext == "html" || ext == "apk" || ext == "db"){
+              fs.appendFileSync(
+                "./message.txt",
+                '<iframe class="msgblock ' +
+                  naam.name +
+                  '" style="background-color: hsl(' +
+                  naam.color +
+                  ', 100%, 50%);" src="./uploads/' +
+                  filename +
+                  '"></iframe>' +
+                  "\n"
+              );
+            } else{
+              fs.appendFileSync(
+      "./message.txt",
+      '<div class="msgblock ' +
+        naam.name +
+        '" style="background-color: hsl(' +
+        naam.color +
+        ', 100%, 50%);">' +
+        naam.name +
+        ": File Format Not Supported</div>" +
+        "\n"
+    );
+            }
             mails();
           }
         });
@@ -72,7 +123,6 @@ io.on("connection", (socket) => {
     });
   });
 });
-
 let mails = () => {
   fs.readFile("./message.txt", "utf-8", (err, data) => {
     if (err) console.log(err);
