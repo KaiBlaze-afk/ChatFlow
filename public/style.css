@@ -114,6 +114,15 @@ body {
   width: 70%;
   object-fit: contain;
 }
+.sendfile{
+  text-decoration: none;
+  border-radius: 80px;
+}
+.unsupported{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  border-radius: 80px;
+}
 #file {
   display: none;
 }

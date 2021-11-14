@@ -16,6 +16,7 @@ io.on("connection", (socket) => {
   mails();
   socket.on("disconnect", () => {
     console.log("user disconnected");
+    socket.broadcast.emit('disconnected');
   });
   socket.on("name", (name) => {
     socket.broadcast.emit("namee", name);
@@ -91,30 +92,39 @@ io.on("connection", (socket) => {
                   '"></video>' +
                   "\n"
               );
-            } else if(ext == "pdf" || ext == "txt" || ext == "html" || ext == "apk" || ext == "db"){
+            } else if (
+              ext == "pdf" ||
+              ext == "txt" ||
+              ext == "html" ||
+              ext == "apk" ||
+              ext == "db"
+            ) {
               fs.appendFileSync(
                 "./message.txt",
-                '<iframe class="msgblock ' +
+                '<a download class="msgblock sendfile ' +
                   naam.name +
                   '" style="background-color: hsl(' +
                   naam.color +
-                  ', 100%, 50%);" src="./uploads/' +
+                  ', 100%, 50%);" href="./uploads/' +
                   filename +
-                  '"></iframe>' +
+                  '">' +
+                  "&#8681; " +
+                  filename +
+                  "</a>" +
                   "\n"
               );
-            } else{
+            } else {
               fs.appendFileSync(
-      "./message.txt",
-      '<div class="msgblock ' +
-        naam.name +
-        '" style="background-color: hsl(' +
-        naam.color +
-        ', 100%, 50%);">' +
-        naam.name +
-        ": File Format Not Supported</div>" +
-        "\n"
-    );
+                "./message.txt",
+                '<div class="msgblock unsupported ' +
+                  naam.name +
+                  '" style="background-color: hsl(' +
+                  naam.color +
+                  ', 100%, 50%);">' +
+                  naam.name +
+                  ": File Format Not Supported</div>" +
+                  "\n"
+              );
             }
             mails();
           }

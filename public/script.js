@@ -105,5 +105,13 @@ let showopt = () => {
     ? (dark.style.display = "block")
     : (dark.style.display = "none");
 };
+
+socket.on('disconnected',()=>{
+  document.getElementById("welcome").innerHTML = " A user left the chat";
+  document
+    .getElementById("msgbox")
+    .setAttribute("style", "border-radius: 2px 2px 2px 2px;");
+})
+
 scrollupdate();
 window.onload = scrollupdate()
